@@ -2,21 +2,21 @@
 import type { Configuration, RuleSetLoader, RuleSetUseItem } from 'webpack';
 
 function logError(message: string, value?: any){
-  console.error(`[patchPostCSS]: ${message}`, value ? value : '');
+  console.error(`[patchAngularPostCSS]: ${message}`, value ? value : '');
 }
-export interface IpatchPostCSS{
+export interface IpatchAngularPostCSS{
   webpackConfig: Configuration,
   addPlugins?: {[k: string]: any}[],
   patchComponentsStyles?: boolean,
   patchGlobalStyles?: boolean,
 }
 
-export function patchPostCSS({
+export function patchAngularPostCSS({
   webpackConfig,
   addPlugins = [],
   patchComponentsStyles = false,
   patchGlobalStyles = true,
-}: IpatchPostCSS
+}: IpatchAngularPostCSS
 ) {
   const pluginName = 'autoprefixer';
   if (!webpackConfig) {

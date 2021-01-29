@@ -16,11 +16,11 @@ This library exports function that can be used inside custom-webpack to add cust
 `webpack.config.js`:
 
 ```
-const { patchPostCSS } = require("patchAngularPostCSS");
+const { patchAngularPostCSS } = require("patch-angular-postcss");
 
 
 module.exports = (config) => {
-function patchPostCSS({
+function patchAngularPostCSS({
   webpackConfig: config,
   addPlugins: [require('postcss-preset-env'), require('postcss-css-variables')],
   patchComponentsStyles: true,
