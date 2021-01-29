@@ -20,12 +20,13 @@ const { patchAngularPostCSS } = require("patch-angular-postcss");
 
 
 module.exports = (config) => {
-function patchAngularPostCSS({
-  webpackConfig: config,
-  addPlugins: [require('postcss-preset-env'), require('postcss-css-variables')],
-  patchComponentsStyles: true,
-  patchGlobalStyles: true,
-}
+  function patchAngularPostCSS({
+    webpackConfig: config,
+    addPlugins: [require('postcss-preset-env'), require('postcss-css-variables')],
+    patchComponentsStyles: true,
+    patchGlobalStyles: true,
+  }
+  return config;
 };
 ```
 
