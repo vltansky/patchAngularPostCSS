@@ -31,16 +31,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "pathangularpostcss",
+  "name": "patchangularpostcss",
   "author": "Vlad Tansky",
-  "module": "dist/pathangularpostcss.esm.js",
+  "module": "dist/patchangularpostcss.esm.js",
   "size-limit": [
     {
-      "path": "dist/pathangularpostcss.cjs.production.min.js",
+      "path": "dist/patchangularpostcss.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/pathangularpostcss.esm.js",
+      "path": "dist/patchangularpostcss.esm.js",
       "limit": "10 KB"
     }
   ],

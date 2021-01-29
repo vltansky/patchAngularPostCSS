@@ -7,15 +7,15 @@ function logError(message: string, value?: any){
 export interface IpatchPostCSS{
   webpackConfig: Configuration,
   addPlugins?: {[k: string]: any}[],
-  pathComponentsStyles?: boolean,
-  pathGlobalStyles?: boolean,
+  patchComponentsStyles?: boolean,
+  patchGlobalStyles?: boolean,
 }
 
 export function patchPostCSS({
   webpackConfig,
   addPlugins = [],
-  pathComponentsStyles = false,
-  pathGlobalStyles = true,
+  patchComponentsStyles = false,
+  patchGlobalStyles = true,
 }: IpatchPostCSS
 ) {
   const pluginName = 'autoprefixer';
@@ -31,8 +31,8 @@ export function patchPostCSS({
     const ruleSetUseItems = rule.use as RuleSetUseItem[];
     if (
       !(ruleSetUseItems && ruleSetUseItems.length > 0) ||
-      (!pathComponentsStyles && rule.exclude) ||
-      (!pathGlobalStyles && rule.include)
+      (!patchComponentsStyles && rule.exclude) ||
+      (!patchGlobalStyles && rule.include)
     ) {
       continue;
     }
