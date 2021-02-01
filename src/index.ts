@@ -1,4 +1,4 @@
-import type { Configuration, RuleSetLoader, RuleSetUseItem } from 'webpack'; // prettier-ignore
+import type { Configuration, RuleSetLoader, RuleSetUseItem } from 'webpack';
 
 function logError(message: string, value?: any){
   console.error(`[patchAngularPostCSS]: ${message}`, value ? value : '');
