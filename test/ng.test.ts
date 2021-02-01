@@ -1,4 +1,4 @@
-import { patchAngularPostCSS } from '../src';
+// import { patchAngularPostCSS } from '../src';
 
 describe('Angular workspace', () => {
   it('works', () => {

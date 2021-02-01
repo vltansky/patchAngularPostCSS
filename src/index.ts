@@ -1,5 +1,4 @@
-// https://github.com/ngneat/tailwind/pull/30/commits/531b4c263af48e8ce4b0fd6e45f483e150b8c661
-import type { Configuration, RuleSetLoader, RuleSetUseItem } from 'webpack';
+import type { Configuration, RuleSetLoader, RuleSetUseItem } from 'webpack'; // prettier-ignore
 
 function logError(message: string, value?: any){
   console.error(`[patchAngularPostCSS]: ${message}`, value ? value : '');
